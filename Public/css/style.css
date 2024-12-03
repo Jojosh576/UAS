@@ -1,0 +1,703 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252a;
+}
+
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #24252a;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header--hidden {
+    transform: translateY(-100%);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Sesuaikan dengan tinggi header Anda */
+}
+
+body {
+    padding-top: 80px; /* Sesuaikan dengan tinggi header Anda */
+}
+
+.logo {
+    width: 100px; /* Sesuaikan ukuran ini sesuai kebutuhan */
+    height: auto; /* Ini akan menjaga rasio aspek gambar */
+    cursor: pointer;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #0088a9;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #0088a9;
+    border-radius: 25px;
+    transition: all 0.3s ease 0s;
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+}
+
+.nav_links li a:hover {
+    background-color: #0088a9;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 136, 169, 0.5);
+}
+
+.nav_links li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: 400% 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 20px;
+}
+
+.nav_links li a:hover::before {
+    opacity: 1;
+}
+
+.nav_links li a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                 0 0 20px rgba(255, 255, 255, 0.8), 
+                 0 0 30px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+button {
+    padding: 9px 25px;
+    background-color: #0088a9;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: #ffffff;
+}
+
+button:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+#slideshow-container {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: left 1s ease-in-out;
+}
+
+.slide.active {
+    left: 0;
+}
+
+.slide.prev {
+    left: -100%;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.sign-in-button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #4da6ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sign-in-button:hover {
+    background-color: #3b8edb;
+}
+.slide-text {
+    color: white;
+    font-size: 3em;
+    font-family: 'Lucida Sans', Geneva, sans-serif;
+    text-align: center;
+    padding: 15px;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    right: 10%;
+    max-width: 80%;
+    background-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.heading {
+    font-family: "Montserrat", sans-serif;
+    font-size: 4rem;
+    color: #edf0f1;
+    text-align: center;
+    margin: 5rem 0 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Fashion Section */
+.fashion-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #24252a;
+    max-width: 1200px;
+}
+
+.fashion-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #24252a;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border: 2px solid #0088a9;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    height: 100%; /* Ensure all cards have the same height */
+    position: relative;
+}
+
+.fashion-card .image-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 75%; /* 4:3 aspect ratio */
+}
+
+.fashion-card .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.fashion-card .card-content {
+    padding: 20px;
+    text-align: left;
+    flex-grow: 1; /* Allow content to grow and fill the card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute content evenly */
+}
+
+.fashion-card h3 {
+    color: #edf0f1;
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+}
+
+.fashion-card .position {
+    color: #0088a9;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+.fashion-card .description {
+    color: #edf0f1;
+    font-size: 1em;
+    line-height: 1.6;
+    flex-grow: 1; /* Allow description to grow */
+}
+
+/* Ensure consistent height for all cards */
+.fashion-card-link {
+    display: flex;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    z-index: 1;
+}
+
+section.fashion {
+    padding: 40px 0;
+    background-color: #24252a;
+}
+
+.fashion-card:hover {
+    box-shadow: 0 6px 12px rgba(0,136,169,0.3);
+}
+
+/* Remove these styles as they're no longer needed */
+.fashion-card:nth-child(even),
+.fashion-card:nth-child(odd) {
+    flex-direction: column;
+}
+
+/* Untuk Health Section */
+.health-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #24252a;
+}
+
+.health-card {
+    display: flex;
+    align-items: center;
+    background-color: #24252a;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border: 2px solid #0088a9;
+    padding: 20px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+/* Atur gambar agar lebih kecil */
+.health-card .image-container {
+    width: 20%; /* Mengurangi lebar gambar */
+    height: auto;
+}
+
+.health-card .image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Atur konten deskripsi */
+.health-card .card-content {
+    width: 80%;
+    text-align: left;
+    padding: 0 20px;
+}
+
+/* Judul dan teks */
+.health-card h3 {
+    color: #edf0f1;
+    margin: 5px 0;
+    font-size: 1.5em;
+}
+
+.health-card p {
+    color: #edf0f1;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Mengatur posisi gambar di sebelah kiri pada kartu genap */
+.health-card:nth-child(even) {
+    flex-direction: row;
+}
+
+/* Posisi gambar di sebelah kanan pada kartu ganjil */
+.health-card:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+/* Latar belakang Health section */
+section.health {
+    padding: 40px 0;
+    background-color: #24252a;
+}
+
+/* Transisi halus saat hover */
+.health-card:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.health-card {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.health-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.health-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.health-card:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.health-card:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+/* Ad Section */
+.ad-section {
+    padding: 40px 0;
+    background-color: #24252a;
+}
+
+.ad-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #0088a9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.ad-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.ad-content h2 {
+    font-size: 2.5em;
+    color: #ffffff;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.ad-content p {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-bottom: 30px;
+    background-color: transparent;
+}
+
+.ad-button {
+    align-self: flex-start;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #0088a9;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none; 
+    display: inline-block; 
+}
+
+.ad-button:hover {
+    background-color: #edf0f1;
+    transform: scale(1.05);
+}
+
+.ad-image {
+    flex: 1;
+    background-color: transparent;
+}
+
+.ad-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.fashion-card {
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modalImage {
+    max-width: 100%;
+    height: auto;
+}
+
+.lifestyle-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #24252a;
+}
+
+.lifestyle-heading {
+    font-family: "Montserrat", sans-serif;
+    font-size: 4rem;
+    color: #edf0f1;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.lifestyle-description {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    color: #edf0f1;
+    text-align: center;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 80px; 
+    }
+}
+
+section {
+    padding: 20px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+html {
+    --scroll-behavior: smooth;
+    scroll-behavior: smooth;
+
+}
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-icons {
+    margin-bottom: 15px;
+    background: #000000;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    color: #ffffff;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.social-icon ion-icon {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 50%;
+    padding: 5px;
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover ion-icon {
+    transform: scale(1.2) rotate(360deg);
+    background-color: #0088a9; 
+    color: #ffffff;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background: #000000;
+}
+
+.footer-nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.footer-nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    background: #000000;
+}
+
+.social-icon ion-icon {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 50%;
+    padding: 5px;
+    width: 24px;
+    height: 24px;
+}
+
+
+.fashion-description,
+.health-description {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    color: #edf0f1;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+
+.heading {
+    font-family: "Montserrat", sans-serif;
+    font-size: 4rem;
+    color: #edf0f1;
+    text-align: center;
+    margin: 5rem 0 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+
+
+
+.fashion .heading,
+.health .heading {
+    color: #ffffff; 
+    text-align: center; 
+    margin-bottom: 30px; 
+    font-size: 2.5em; 
+    font-weight: bold; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+}
+
+
+.fashion .heading:hover,
+.health .heading:hover {
+    color: #f0f0f0; 
+    transition: color 0.3s ease; 
+}
+
+.image-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.health-container .image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 80px; 
+}
+
+#home-slideshow {
+    scroll-margin-top: 80px; 
+}
