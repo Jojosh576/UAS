@@ -1,25 +1,20 @@
+// Public/js/controllers/SignupController.js
 angular.module('balancedBlissApp', [])
-    .controller('SignupController', ['$scope', '$http', function($scope, $http) {
-        console.log('SignupController loaded');
-        $scope.user = {};
+.controller('SignupController', ['$scope', '$http', function($scope, $http) {
+  console.log('SignupController loaded');
+  $scope.user = {};
 
-        $scope.signup = function() {
-            console.log('Data yang dikirim:', $scope.user);
-            $http.post('/api/signup', $scope.user)
-                .then(function(response) {
-                    console.log('Respons sukses:', response.data);
-                    alert(response.data.message);
-                    window.location.href = '/login.html';
-                })
-                .catch(function(err) {
-                    console.error('Error signup:', err);
-                    alert(err.data.error || 'Terjadi kesalahan saat signup');
-                });
-        };
-    }]);
-    res.status(201).json({ 
-        message: 'Signup berhasil', 
-        user: { username: user.username, createdAt: user.createdAt }
+  $scope.signup = function() {
+    console.log('Data yang dikirim:', $scope.user);
+    $http.post('/api/signup', $scope.user)
+    .then(function(response) {
+      console.log('Respons sukses:', response.data);
+      alert(response.data.message);  // Menampilkan pesan sukses dari server
+      window.location.href = '/login.html';  // Redirect ke halaman login
+    })
+    .catch(function(err) {
+      console.error('Error signup:', err);
+      alert(err.data.message || 'Terjadi kesalahan saat signup');  // Menampilkan pesan error dari server
     });
-    res.redirect('/');  // Redirect ke halaman index setelah signup
-    
+  };
+}]);

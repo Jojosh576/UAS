@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+    }
+    .container {
+      width: 100%;
+      max-width: 600px;
+      margin: 50px auto;
+      background: white;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    .profile-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .profile-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto;
+      display: block;
+    }
+    .profile-info {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .profile-info h3 {
+      margin: 10px 0;
+    }
+    .profile-info p {
+      color: #666;
+      margin: 5px 0;
+    }
+    .button {
+      display: block;
+      width: calc(100% - 40px);
+      padding: 10px;
+      margin: 10px auto;
+      color: white;
+      background-color: #4CAF50;
+      text-align: center;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .button.red {
+      background-color: #f44336;
+    }
+    .button:not(:last-child) {
+      border-bottom: none;
+    }
+    input[type="file"] {
+      display: none;
+    }
+    .file-upload {
+      cursor: pointer;
+      padding: 10px;
+      background: #ddd;
+      display: inline-block;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile-header">
+      <label for="file-input">
+        <img src="https://i.gifer.com/DNBk.gif" alt="Profile Image" class="profile-image">
+        <span class="file-upload">Change Photo</span>
+      </label>
+      <input id="file-input" type="file" onchange="updateProfileImage(this)">
+    </div>
+    <div class="profile-info">
+      <h3>Jason</h3>
+      <p>Email: jason@example.com</p>
+      <p>Joined: November 25, 2024</p>
+    </div>
+    <a href="#" class="button">Edit Profile</a>
+    <a href="#" class="button">Main Menu</a>
+    <a href="#" class="button">Logout</a>
+    <a href="#" class="button red">Delete Account</a>
+  </div>
+
+  <script>
+    function updateProfileImage(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          document.querySelector('.profile-image').src = e.target.result;
+        };
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+  </script>
+</body>
+</html>
