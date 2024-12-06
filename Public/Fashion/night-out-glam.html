@@ -1,90 +1,462 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Night Out Glam - Fashion Blog</title>
-    <link rel="stylesheet" href="../style.css">
-    <style>
-        body {
+<html>
+ <head>
+  <title>
+   Product Page
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             background-color: #1a1a1a;
-            color: #ffffff;
         }
-        .fashion-blog {
-            max-width: 800px;
-            margin: 0 auto;
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
             padding: 20px;
-            line-height: 1.6;
         }
-        .fashion-blog img {
-            max-width: 100%;
+        .product-card {
+            width: 30%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .product-card img {
+            width: 100%;
             height: auto;
-            margin-bottom: 20px;
-            border-radius: 8px;
+            border-radius: 10px;
         }
-        .fashion-blog h1, .fashion-blog h2 {
-            color: #ffffff;
-            margin-top: 30px;
+        .product-card .ad {
+            font-size: 14px;
+            color: #999;
+            margin: 10px 0;
         }
-        .fashion-blog p {
-            margin-bottom: 20px;
+        .product-card .rating {
+            font-size: 14px;
+            color: #f5a623;
+            margin: 10px 0;
         }
-        .fashion-blog ul {
+        .product-card .offer {
+            background-color: grey;
+            color: #fff;
+            padding: 5px;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .product-card .offer-details {
+            font-size: 12px;
+            color: #666;
+            margin: 5px 0;
+        }
+        .product-card .product-name {
+            font-size: 16px;
+            font-weight: bold;
             color: #e0e0e0;
+            margin: 10px 0;
         }
-        a {
-            color: #4da6ff;
-            text-decoration: none;
+        .product-card .vip {
+            font-size: 12px;
+            color: #666;
+            margin-left: 5px;
+            background-color: #e0e0e0;
+            padding: 2px 5px;
+            border-radius: 3px;
         }
-        a:hover {
-            text-decoration: underline;
+        .product-card .product-code {
+            font-size: 14px;
+            color: #666;
+            margin: 5px 0;
         }
-    </style>
-</head>
-<body>
-
-    <main class="fashion-blog">
-        <h1>Night Out Glam: Shining Bright After Dark</h1>
-        <img src="../image/fashion/fashion4.jpg" alt="Evening Glamour">
-        
-        <p>As the sun sets and the city lights begin to twinkle, Night Out Glam takes center stage. This isn't just about dressing up; it's about transforming into the most glamorous version of yourself, ready to paint the town red and create unforgettable memories.</p>
-
-        <h2>The Essence of Night Out Glam</h2>
-        <p>Night Out Glam is all about embracing luxury, confidence, and a touch of daring. It's the art of standing out in a sea of people, turning heads as you enter a room, and feeling like the star of your own movie. This style allows you to express your boldest self, combining elegance with a dash of drama.</p>
-
-        <h2>Key Elements of the Night Out Glam Look</h2>
-        <p>The Night Out Glam style is built on statement pieces that catch the light and the eye. Here are the essential elements:</p>
-        <ul>
-            <li><strong>The perfect LBD (Little Black Dress) or a bold colored dress:</strong> Your canvas for creating a stunning look.</li>
-            <li><strong>Statement heels:</strong> Elevate your height and your style with eye-catching footwear.</li>
-            <li><strong>Sparkling jewelry:</strong> Think chandelier earrings or a bold necklace to add some shine.</li>
-            <li><strong>Clutch or small handbag:</strong> A chic accessory to hold your essentials.</li>
-            <li><strong>Dramatic makeup:</strong> Smokey eyes or bold lips to complete your glamorous transformation.</li>
-        </ul>
-
-        <h2>How to Style Your Night Out Glam Look</h2>
-        <p>Start with your showstopping dress - whether it's a classic LBD or a bold, colorful number that reflects your personality. The key is to choose something that makes you feel confident and beautiful. Pair it with statement heels that complement your dress and are comfortable enough for a night of dancing.</p>
-        <p>Accessories are crucial in Night Out Glam. Choose one or two statement pieces - perhaps dramatic earrings or a bold necklace - but be careful not to overdo it. Your clutch or small handbag should be both functional and fashionable, perhaps with some metallic or sequin details to catch the light.</p>
-
-        <h2>Where to Showcase Your Night Out Glam</h2>
-        <p>The Night Out Glam style is perfect for a variety of evening events:</p>
-        <ul>
-            <li>Cocktail parties</li>
-            <li>Nightclub outings</li>
-            <li>Formal dinners</li>
-            <li>Theater or opera nights</li>
-            <li>New Year's Eve celebrations</li>
-        </ul>
-        <p>Wherever you go, Night Out Glam ensures you'll be dressed to impress and ready for whatever exciting experiences the night may bring.</p>
-
-        <h2>Embracing Night Out Glam: More Than Just Fashion</h2>
-        <p>Night Out Glam is more than just a look; it's a state of mind. It's about embracing your most confident, radiant self and being ready to make every moment count. This style allows you to step out of your everyday persona and into a world of glamour and excitement.</p>
-
-        <p>So slip into that stunning dress, step into those killer heels, and get ready to dazzle. With Night Out Glam, you're not just going out - you're making an entrance, creating memories, and shining brighter than the city lights.</p>
-
-        <p><a href="/#fashion">Back to Fashion</a></p>
-
-    </main>
-
-</body>
+        .product-card .price {
+            font-size: 18px;
+            color: #e53935;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .product-card .original-price {
+            font-size: 14px;
+            color: #999;
+            text-decoration: line-through;
+            margin: 5px 0;
+        }
+        .product-card .discount {
+            font-size: 14px;
+            color: #e53935;
+            margin: 5px 0;
+        }
+        .product-card .wishlist {
+            font-size: 20px;
+            color: #999;
+            margin: 10px 0;
+        }
+        @media (max-width: 768px) {
+            .product-card {
+                width: 45%;
+            }
+        }
+        @media (max-width: 480px) {
+            .product-card {
+                width: 100%;
+            }
+        }
+        .custom-image {
+            width: 100px;
+            height: 200px;
+            border-radius: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Blue New Balance shoe" height="200" src="https://down-id.img.susercontent.com/file/a018781742021cf2bd3c640df504ca07" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Tanpa min. pembelian.
+    </div>
+    <div class="product-name">
+     Kemeja lengan panjang biru tua
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     1080V14
+    </div>
+    <div class="price">
+     Rp 2.239.200
+    </div>
+    <div class="original-price">
+     Rp 2.799.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Black New Balance shoe" height="200" src="https://down-id.img.susercontent.com/file/e19e2135bc7659afbf1d1a640e4f5d08" width="300"/>
+    <div class="offer">
+     Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Tanpa min. pembelian.
+    </div>
+    <div class="product-name">
+     kemeja pendek biru muda
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     1080V14
+    </div>
+    <div class="price">
+     Rp 2.239.200
+    </div>
+    <div class="original-price">
+     Rp 2.799.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img class="custom-image" alt="Pink Converse Raglan Hi Low Knit Top" src="https://img.lazcdn.com/g/p/a5d9b41ab9809e04b233d0824e76cdb9.jpg_360x360q75.jpg_.webp"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="product-name">
+        Kaos True Spirit
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     Raglan Hi Low Knit Top
+    </div>
+    <div class="price">
+     Rp 2.239.200
+    </div>
+    <div class="original-price">
+     Rp 2.799.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Blue New Balance shoe" height="200" src="https://down-id.img.susercontent.com/file/e7286d53232954884965ca11b6ab5d86" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Tanpa min. pembelian.
+    </div>
+    <div class="product-name">
+        Kaos lengan pendek gradien hiitam-putih
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     1080V14
+    </div>
+    <div class="price">
+     Rp 2.239.200
+    </div>
+    <div class="original-price">
+     Rp 2.799.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Black New Balance shoe" height="200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShuV6YgZYEs9MJGpz3sDspMbzDT72K6bD68g&s" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Tanpa min. pembelian.
+    </div>
+    <div class="product-name">
+        Kaos putih dan celana pendek putih
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     1080V14
+    </div>
+    <div class="price">
+     Rp 2.239.200
+    </div>
+    <div class="original-price">
+     Rp 2.799.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Pink Converse Raglan Hi Low Knit Top" height="200" src="https://s4.bukalapak.com/img/99050487592/s-463-463/data.jpeg.webp" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Min. pembelian Rp299.000, maks. potongan Rp250.000.
+    </div>
+    <div class="product-name">
+        Sweater Biru
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     Raglan Hi Low Knit Top
+    </div>
+    <div class="price">
+     Rp 2.239.200
+    </div>
+    <div class="original-price">
+     Rp 2.799.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Blue New Balance shoe" height="200" src="https://down-id.img.susercontent.com/file/sg-11134201-23010-gz9rblzmsemv93" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Tanpa min. pembelian.
+    </div>
+    <div class="product-name">
+        Sweater Merah dan putih, celana panjang hitam
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     1080V14
+    </div>
+    <div class="price">
+     Rp 2.239.200
+    </div>
+    <div class="original-price">
+     Rp 2.799.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Black New Balance shoe" height="200" src="https://down-id.img.susercontent.com/file/sg-11134201-7qvd1-lhpwtmmll6s39c" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Tanpa min. pembelian.
+    </div>
+    <div class="product-name">
+     Aqua Sweater dan celana panjang hitam
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     1080V14
+    </div>
+    <div class="price">
+     Rp 2.239.200
+    </div>
+    <div class="original-price">
+     Rp 2.799.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Pink Converse Raglan Hi Low Knit Top" height="200" src="https://s0.bukalapak.com/img/53429500303/s-463-463/id_11134207_7r98u_lxuqccudtb1q69.jpg.webp" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Min. pembelian Rp299.000, maks. potongan Rp250.000.
+    </div>
+    <div class="product-name">
+        Kaos Hitam Putih
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     Raglan Hi Low Knit Top
+    </div>
+    <div class="price">
+     Rp 2.239.200
+    </div>
+    <div class="original-price">
+     Rp 2.799.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+  </div>
+ </body>
 </html>

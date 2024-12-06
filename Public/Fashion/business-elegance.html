@@ -1,89 +1,462 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Elegance - Fashion Blog</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <style>
-        body {
+<html>
+ <head>
+  <title>
+   Product Page
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             background-color: #1a1a1a;
-            color: #ffffff;
         }
-        .fashion-blog {
-            max-width: 800px;
-            margin: 0 auto;
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
             padding: 20px;
-            line-height: 1.6;
         }
-        .fashion-blog img {
-            max-width: 100%;
+        .product-card {
+            width: 30%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .product-card img {
+            width: 100%;
             height: auto;
-            margin-bottom: 20px;
-            border-radius: 8px;
+            border-radius: 10px;
         }
-        .fashion-blog h1, .fashion-blog h2 {
-            color: #ffffff;
-            margin-top: 30px;
+        .product-card .ad {
+            font-size: 14px;
+            color: #999;
+            margin: 10px 0;
         }
-        .fashion-blog p {
-            margin-bottom: 20px;
+        .product-card .rating {
+            font-size: 14px;
+            color: #f5a623;
+            margin: 10px 0;
         }
-        .fashion-blog ul {
+        .product-card .offer {
+            background-color: grey;
+            color: #fff;
+            padding: 5px;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .product-card .offer-details {
+            font-size: 12px;
+            color: #666;
+            margin: 5px 0;
+        }
+        .product-card .product-name {
+            font-size: 16px;
+            font-weight: bold;
             color: #e0e0e0;
+            margin: 10px 0;
         }
-        a {
-            color: #4da6ff;
-            text-decoration: none;
+        .product-card .vip {
+            font-size: 12px;
+            color: #666;
+            margin-left: 5px;
+            background-color: #e0e0e0;
+            padding: 2px 5px;
+            border-radius: 3px;
         }
-        a:hover {
-            text-decoration: underline;
+        .product-card .product-code {
+            font-size: 14px;
+            color: #666;
+            margin: 5px 0;
         }
-    </style>
-</head>
-<body>
-
-    <main class="fashion-blog">
-        <h1>Business Elegance: Dressing for Success in the Corporate World</h1>
-        <img src="../image/fashion/fashion2.jpg" alt="Formal Wear">
-        
-        <p>In the fast-paced world of business, where first impressions can make or break deals, Business Elegance stands as the pinnacle of professional attire. This isn't just about wearing a suit; it's about projecting confidence, competence, and sophistication in every thread.</p>
-
-        <h2>The Essence of Business Elegance</h2>
-        <p>Business Elegance is the art of balancing professionalism with personal style. It's about creating a polished look that commands respect in the boardroom while allowing your individual flair to shine through. This style is the embodiment of the modern professional: sharp, adaptable, and always ready to lead.</p>
-
-        <h2>Key Elements of the Business Elegance Look</h2>
-        <p>The Business Elegance style is built on classic pieces with contemporary twists. Here are the essential elements:</p>
-        <ul>
-            <li><strong>Tailored suit:</strong> The foundation of any business wardrobe, perfectly fitted to your body.</li>
-            <li><strong>Crisp dress shirt:</strong> A high-quality shirt in white or light blue for versatility.</li>
-            <li><strong>Statement tie:</strong> Adds a pop of color and personality to your ensemble.</li>
-            <li><strong>Leather oxfords:</strong> Classic, polished shoes that complete the professional look.</li>
-            <li><strong>Elegant watch:</strong> A subtle yet powerful accessory that speaks volumes.</li>
-        </ul>
-
-        <h2>How to Style Your Business Elegance Look</h2>
-        <p>Creating your Business Elegance outfit starts with a well-fitted suit in a versatile color like navy or charcoal. Pair it with a crisp white shirt for a timeless look, or opt for a light blue to add a subtle touch of color. Your tie is where you can inject some personality - choose patterns or colors that reflect your style while remaining office-appropriate.</p>
-        <p>Accessories play a crucial role in Business Elegance. A leather belt that matches your shoes, an elegant watch, and perhaps a pair of cufflinks can elevate your look from good to great. Remember, in business attire, less is often more - let the quality and fit of your clothes speak for themselves.</p>
-
-        <h2>Where to Showcase Your Business Elegance</h2>
-        <p>The Business Elegance style is perfect for a variety of professional settings:</p>
-        <ul>
-            <li>Important client meetings or presentations</li>
-            <li>Job interviews</li>
-            <li>Corporate events and galas</li>
-            <li>Networking functions</li>
-            <li>Daily office wear in formal business environments</li>
-        </ul>
-        <p>While primarily designed for the corporate world, Business Elegance can be adapted for other formal occasions, showcasing your professionalism beyond the office.</p>
-
-        <h2>Embracing Business Elegance: More Than Just Fashion</h2>
-        <p>Business Elegance is more than just a dress code; it's a mindset. It reflects your attention to detail, your respect for your profession and colleagues, and your readiness to take on leadership roles. By mastering Business Elegance, you're not just dressing for the job you have, but for the one you aspire to.</p>
-
-        <p>So button up that jacket, straighten your tie, and step into the professional arena with confidence. With Business Elegance, you're not just dressed for success - you're dressed to lead, inspire, and make your mark in the business world.</p>
-        <p><a href="/#fashion">Back to Fashion</a></p>
-
-    </main>
-
-</body>
+        .product-card .price {
+            font-size: 18px;
+            color: #e53935;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .product-card .original-price {
+            font-size: 14px;
+            color: #999;
+            text-decoration: line-through;
+            margin: 5px 0;
+        }
+        .product-card .discount {
+            font-size: 14px;
+            color: #e53935;
+            margin: 5px 0;
+        }
+        .product-card .wishlist {
+            font-size: 20px;
+            color: #999;
+            margin: 10px 0;
+        }
+        @media (max-width: 768px) {
+            .product-card {
+                width: 45%;
+            }
+        }
+        @media (max-width: 480px) {
+            .product-card {
+                width: 100%;
+            }
+        }
+        .custom-image {
+            width: 100px;
+            height: 200px;
+            border-radius: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Blue New Balance shoe" height="200" src="https://cdn.idntimes.com/content-images/community/2021/08/htb1m3rpklhh8kjjy0fbq6aqlpxaj-2df74cab14a794816f8530862347a9af-ffb4c13f9167c74b15b9cf69e9383640.jpg" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Tanpa min. pembelian.
+    </div>
+    <div class="product-name">
+     Black Suit full Set
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     1080V14
+    </div>
+    <div class="price">
+     Rp 2.239.200
+    </div>
+    <div class="original-price">
+     Rp 2.799.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Black New Balance shoe" height="200" src="https://image.made-in-china.com/202f0j00uqGcgprRVMoP/Elegant-Suits-Custom-Men-Wedding-Suits-Slim-Formal-Business-Suits-Men-Suits.webp" width="300"/>
+    <div class="offer">
+     Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Tanpa min. pembelian.
+    </div>
+    <div class="product-name">
+     Beige Bisnis Suit full set
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     1080V14
+    </div>
+    <div class="price">
+     Rp 2.239.200
+    </div>
+    <div class="original-price">
+     Rp 2.799.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img class="custom-image" alt="Pink Converse Raglan Hi Low Knit Top" src="https://s.alicdn.com/@sc04/kf/H8bb7575e57ba43029870d653e13850f3j.png_720x720q50.jpg"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="product-name">
+        Slim Fit Autumn Winter suits
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     Raglan Hi Low Knit Top
+    </div>
+    <div class="price">
+     Rp 2.239.200
+    </div>
+    <div class="original-price">
+     Rp 2.799.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Blue New Balance shoe" height="200" src="https://s.alicdn.com/@sc04/kf/Hd66fe6680bfd41e6835160a98abb24d0i.jpg_720x720q50.jpg" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Tanpa min. pembelian.
+    </div>
+    <div class="product-name">
+        Wine Red Men Suit
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     1080V14
+    </div>
+    <div class="price">
+     Rp 2.239.200
+    </div>
+    <div class="original-price">
+     Rp 2.799.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Black New Balance shoe" height="200" src="https://gw.alicdn.com/imgextra/O1CN01Zf24jd20rcxquQFLS_!!6000000006903-0-yinhe.jpg_540x540q90.jpg" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Tanpa min. pembelian.
+    </div>
+    <div class="product-name">
+        White Winter men Suits
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     1080V14
+    </div>
+    <div class="price">
+     Rp 2.239.200
+    </div>
+    <div class="original-price">
+     Rp 2.799.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Pink Converse Raglan Hi Low Knit Top" height="200" src="https://s.alicdn.com/@sc04/kf/Hc6dca37b5bda4c889ed9d1f9a7abd472i.png_720x720q50.jpg" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Min. pembelian Rp299.000, maks. potongan Rp250.000.
+    </div>
+    <div class="product-name">
+        Autumn Winter Formal Suits
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     Raglan Hi Low Knit Top
+    </div>
+    <div class="price">
+     Rp 2.239.200
+    </div>
+    <div class="original-price">
+     Rp 2.799.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Blue New Balance shoe" height="200" src="https://s.alicdn.com/@sc04/kf/H7bd509eab6b9463d9018dcba7d72335bR.png_720x720q50.jpg" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Tanpa min. pembelian.
+    </div>
+    <div class="product-name">
+        Jacket Vest Pants Slim Fit Business
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     1080V14
+    </div>
+    <div class="price">
+     Rp 2.239.200
+    </div>
+    <div class="original-price">
+     Rp 2.799.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Black New Balance shoe" height="200" src="https://s.alicdn.com/@sc04/kf/H6d9115d5bec24ddcb783f0682615654dz.png_720x720q50.jpg" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Tanpa min. pembelian.
+    </div>
+    <div class="product-name">
+     Blue Feast Suits
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     1080V14
+    </div>
+    <div class="price">
+     Rp 2.239.200
+    </div>
+    <div class="original-price">
+     Rp 2.799.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Pink Converse Raglan Hi Low Knit Top" height="200" src="https://s.alicdn.com/@sc04/kf/H0c80fb2284f649f288cadf2f36fd627bf.png_720x720q50.jpg   " width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Min. pembelian Rp299.000, maks. potongan Rp250.000.
+    </div>
+    <div class="product-name">
+        Slim Fit Double Breasted Buttons Blue Brown 4XL 3PCs Blazer Vest Pants Formal Wear Men Suits
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     Raglan Hi Low Knit Top
+    </div>
+    <div class="price">
+     Rp 2.239.200
+    </div>
+    <div class="original-price">
+     Rp 2.799.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+  </div>
+ </body>
 </html>

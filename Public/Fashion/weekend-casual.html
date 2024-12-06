@@ -1,91 +1,462 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weekend Casual - Fashion Blog</title>
-    <link rel="stylesheet" href="../style.css">
-    <style>
-        body {
+<html>
+ <head>
+  <title>
+   Product Page
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             background-color: #1a1a1a;
-            color: #ffffff;
         }
-        .fashion-blog {
-            max-width: 800px;
-            margin: 0 auto;
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
             padding: 20px;
-            line-height: 1.6;
         }
-        .fashion-blog img {
-            max-width: 100%;
+        .product-card {
+            width: 30%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .product-card img {
+            width: 100%;
             height: auto;
-            margin-bottom: 20px;
-            border-radius: 8px;
+            border-radius: 10px;
         }
-        .fashion-blog h1, .fashion-blog h2 {
-            color: #ffffff;
-            margin-top: 30px;
+        .product-card .ad {
+            font-size: 14px;
+            color: #999;
+            margin: 10px 0;
         }
-        .fashion-blog p {
-            margin-bottom: 20px;
+        .product-card .rating {
+            font-size: 14px;
+            color: #f5a623;
+            margin: 10px 0;
         }
-        .fashion-blog ul {
+        .product-card .offer {
+            background-color: grey;
+            color: #fff;
+            padding: 5px;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .product-card .offer-details {
+            font-size: 12px;
+            color: #666;
+            margin: 5px 0;
+        }
+        .product-card .product-name {
+            font-size: 16px;
+            font-weight: bold;
             color: #e0e0e0;
+            margin: 10px 0;
         }
-        a {
-            color: #4da6ff;
-            text-decoration: none;
+        .product-card .vip {
+            font-size: 12px;
+            color: #666;
+            margin-left: 5px;
+            background-color: #e0e0e0;
+            padding: 2px 5px;
+            border-radius: 3px;
         }
-        a:hover {
-            text-decoration: underline;
+        .product-card .product-code {
+            font-size: 14px;
+            color: #666;
+            margin: 5px 0;
         }
-    </style>
-</head>
-<body>
-
-
-    <main class="fashion-blog">
-        <h1>Weekend Casual: Embracing Comfort with Style</h1>
-        <img src="../image/fashion/fashion3.jpg" alt="Casual Weekend Outfit">
-        
-        <p>As the work week winds down and the promise of leisure time beckons, Weekend Casual emerges as the perfect style choice for those cherished days off. This isn't just about throwing on whatever's comfortable; it's about curating a look that's relaxed, stylish, and versatile enough for all your weekend adventures.</p>
-
-        <h2>The Essence of Weekend Casual</h2>
-        <p>Weekend Casual is all about striking the perfect balance between comfort and style. It's a look that says you're ready to relax, but you haven't forgotten about your personal flair. This style embraces the laid-back vibe of the weekend while keeping you prepared for impromptu outings or casual meet-ups with friends.</p>
-
-        <h2>Key Elements of the Weekend Casual Look</h2>
-        <p>The Weekend Casual style revolves around comfortable, mix-and-match pieces. Here are the essential elements:</p>
-        <ul>
-            <li><strong>Well-fitted jeans:</strong> The foundation of many casual outfits, choose a comfortable yet flattering pair.</li>
-            <li><strong>Soft, quality t-shirt:</strong> Opt for solid colors or subtle patterns for versatility.</li>
-            <li><strong>Lightweight jacket or cardigan:</strong> Perfect for layering and adapting to changing temperatures.</li>
-            <li><strong>Comfortable sneakers:</strong> Choose a pair that's both stylish and suitable for walking.</li>
-            <li><strong>Casual accessories:</strong> A watch, sunglasses, or a simple necklace can elevate the look.</li>
-        </ul>
-
-        <h2>How to Style Your Weekend Casual Look</h2>
-        <p>Start with your favorite pair of well-fitted jeans as the base. Pair them with a soft, high-quality t-shirt in a color that complements your complexion. Layer with a lightweight jacket or cardigan for added style and practicality - perfect for those unpredictable weekend weather changes.</p>
-        <p>Footwear is crucial in Weekend Casual. Opt for comfortable yet stylish sneakers that can take you from a casual brunch to an impromptu walk in the park. Accessorize minimally - a simple watch or a pair of sunglasses can add just the right touch without overdoing it.</p>
-
-        <h2>Where to Rock Your Weekend Casual Style</h2>
-        <p>The Weekend Casual look is perfect for a variety of relaxed settings:</p>
-        <ul>
-            <li>Casual brunches with friends</li>
-            <li>Shopping trips</li>
-            <li>Movie outings</li>
-            <li>Relaxed family gatherings</li>
-            <li>Casual walks or picnics in the park</li>
-        </ul>
-        <p>The versatility of Weekend Casual means you're always ready for spontaneous plans or a day of relaxation at home.</p>
-
-        <h2>Embracing Weekend Casual: More Than Just Fashion</h2>
-        <p>Weekend Casual is more than just a style; it's a celebration of your personal time. It reflects your ability to unwind while still looking put-together, showcasing a side of your personality that might not shine through in your work attire.</p>
-
-        <p>So slip into those comfortable jeans, throw on your favorite tee, and step out into your weekend with confidence. With Weekend Casual, you're ready for relaxation, adventure, or anything in between - all while looking effortlessly stylish.</p>
-
-        <p><a href="/#fashion">Back to Fashion</a></p>
-
-    </main>
-
-</body>
+        .product-card .price {
+            font-size: 18px;
+            color: #e53935;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .product-card .original-price {
+            font-size: 14px;
+            color: #999;
+            text-decoration: line-through;
+            margin: 5px 0;
+        }
+        .product-card .discount {
+            font-size: 14px;
+            color: #e53935;
+            margin: 5px 0;
+        }
+        .product-card .wishlist {
+            font-size: 20px;
+            color: #999;
+            margin: 10px 0;
+        }
+        @media (max-width: 768px) {
+            .product-card {
+                width: 45%;
+            }
+        }
+        @media (max-width: 480px) {
+            .product-card {
+                width: 100%;
+            }
+        }
+        .custom-image {
+            width: 100px;
+            height: 200px;
+            border-radius: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     4.7
+    </div>
+    <img alt="Kaos T Shirt" height="200" src="https://i.pinimg.com/736x/4f/d1/dd/4fd1ddb9ecd7db4cf831765006dce9ad.jpg" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 30%
+    </div>
+    <div class="offer-details">
+     Tanpa min. pembelian.
+    </div>
+    <div class="product-name">
+     Kaos Hitam Polos Premium
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     1080V14
+    </div>
+    <div class="price">
+     Rp 896.000
+    </div>
+    <div class="original-price">
+     Rp 1.280.000
+    </div>
+    <div class="discount">
+     -30%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     4.9
+    </div>
+    <img alt="Set Kaos dan Kimono" height="200" src="https://i.pinimg.com/736x/88/ce/6a/88ce6a8635419f5c5daadc40fec15ded.jpg" width="300"/>
+    <div class="offer">
+     Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Tanpa min. pembelian.
+    </div>
+    <div class="product-name">
+     Set Kaos dan Kimono Putih
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     1080V14
+    </div>
+    <div class="price">
+     Rp 1.439.200
+    </div>
+    <div class="original-price">
+     Rp 1.799.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     4.6
+    </div>
+    <img class="custom-image" alt="Kaos lacoste" src="https://i.pinimg.com/736x/d9/d6/31/d9d6313179f4373508913778f5d2c3d6.jpg"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="product-name">
+        Kemeja putih biru dan celana pendek biru
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     Raglan Hi Low Knit Top
+    </div>
+    <div class="price">
+     Rp 1.199.200
+    </div>
+    <div class="original-price">
+     Rp 1.499.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     4.9
+    </div>
+    <img alt="Kaos Cream" height="200" src="https://i.pinimg.com/736x/96/ff/25/96ff25e6e55ec4e24feefd8adf3f3a43.jpg" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Tanpa min. pembelian.
+    </div>
+    <div class="product-name">
+        Kaos Cream Tokyo
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     1080V14
+    </div>
+    <div class="price">
+     Rp 1.499.400
+    </div>
+    <div class="original-price">
+     Rp 2.499.000
+    </div>
+    <div class="discount">
+     -40%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Black New Balance shoe" height="200" src="https://i.pinimg.com/236x/92/c6/0b/92c60babc6f3b63444282397534b1774.jpg" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Tanpa min. pembelian.
+    </div>
+    <div class="product-name">
+        Nature Set Casual Uniclo
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     1080V14
+    </div>
+    <div class="price">
+     Rp 2.239.200
+    </div>
+    <div class="original-price">
+     Rp 2.799.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     4.8
+    </div>
+    <img alt="Set Casual 4" height="200" src="https://i.pinimg.com/736x/a4/a5/b3/a4a5b3e9c502a7c6fbc76f1026034ce0.jpg" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 30%
+    </div>
+    <div class="offer-details">
+     Min. pembelian Rp299.000, maks. potongan Rp250.000.
+    </div>
+    <div class="product-name">
+        Set kaos dan Kemeja
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     Raglan Hi Low Knit Top
+    </div>
+    <div class="price">
+     Rp 1.750.000
+    </div>
+    <div class="original-price">
+     Rp 2.500.000
+    </div>
+    <div class="discount">
+     -30%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     4.7
+    </div>
+    <img alt="Blue New Balance shoe" height="200" src="https://i.pinimg.com/736x/8c/e1/67/8ce167edfa681009794097dd8b7b7e4f.jpg" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Tanpa min. pembelian.
+    </div>
+    <div class="product-name">
+        Set Casual W2X
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     1080V14
+    </div>
+    <div class="price">
+     Rp 2.239.200
+    </div>
+    <div class="original-price">
+     Rp 2.799.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Blue Set" height="200" src="https://i.pinimg.com/736x/a5/f5/6d/a5f56d63f68d17b729a4c06bdc9836ef.jpg" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Tanpa min. pembelian.
+    </div>
+    <div class="product-name">
+     Blue Set Casual uniclo
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     1080V14
+    </div>
+    <div class="price">
+     Rp 2.239.200
+    </div>
+    <div class="original-price">
+     Rp 2.799.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Kemeja Coklat" height="200" src="https://i.pinimg.com/736x/9d/6a/ce/9d6ace2b06e87633b158df74c6424ebd.jpg" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 30%
+    </div>
+    <div class="offer-details">
+     Min. pembelian Rp299.000, maks. potongan Rp250.000.
+    </div>
+    <div class="product-name">
+        Kaos Putih dan kemeja Coklat
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     Raglan Hi Low Knit Top
+    </div>
+    <div class="price">
+     Rp 1.750.000
+    </div>
+    <div class="original-price">
+     Rp 2.500.000
+    </div>
+    <div class="discount">
+     -30%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+  </div>
+ </body>
 </html>

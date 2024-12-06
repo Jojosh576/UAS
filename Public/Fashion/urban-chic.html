@@ -1,91 +1,462 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Chic - Fashion Blog</title>
-    <link rel="stylesheet" href="../style.css">
-    <style>
-        body {
+<html>
+ <head>
+  <title>
+   Product Page
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             background-color: #1a1a1a;
-            color: #ffffff;
         }
-        .fashion-blog {
-            max-width: 800px;
-            margin: 0 auto;
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
             padding: 20px;
-            line-height: 1.6;
         }
-        .fashion-blog img {
-            max-width: 100%;
+        .product-card {
+            width: 30%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .product-card img {
+            width: 100%;
             height: auto;
-            margin-bottom: 20px;
-            border-radius: 8px;
+            border-radius: 10px;
         }
-        .fashion-blog h1, .fashion-blog h2 {
-            color: #ffffff;
-            margin-top: 30px;
+        .product-card .ad {
+            font-size: 14px;
+            color: #999;
+            margin: 10px 0;
         }
-        .fashion-blog p {
-            margin-bottom: 20px;
+        .product-card .rating {
+            font-size: 14px;
+            color: #f5a623;
+            margin: 10px 0;
         }
-        .fashion-blog ul {
+        .product-card .offer {
+            background-color: grey;
+            color: #fff;
+            padding: 5px;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .product-card .offer-details {
+            font-size: 12px;
+            color: #666;
+            margin: 5px 0;
+        }
+        .product-card .product-name {
+            font-size: 16px;
+            font-weight: bold;
             color: #e0e0e0;
+            margin: 10px 0;
         }
-        a {
-            color: #4da6ff;
-            text-decoration: none;
+        .product-card .vip {
+            font-size: 12px;
+            color: #666;
+            margin-left: 5px;
+            background-color: #e0e0e0;
+            padding: 2px 5px;
+            border-radius: 3px;
         }
-        a:hover {
-            text-decoration: underline;
+        .product-card .product-code {
+            font-size: 14px;
+            color: #666;
+            margin: 5px 0;
         }
-    </style>
-</head>
-<body>
-
-    <main class="fashion-blog">
-        <h1>Urban Chic: Mastering the Art of Street Style</h1>
-        <img src="../image/fashion/fashion1.jpg" alt="Street Style Outfit">
-        
-        <p>In the bustling heart of the city, where creativity meets concrete, a new fashion phenomenon has taken root: Urban Chic. This isn't just a style; it's a lifestyle, a statement, and a celebration of individuality in the urban jungle.</p>
-
-        <h2>The Essence of Urban Chic</h2>
-        <p>Urban Chic is all about blending comfort with cutting-edge fashion. It's the art of looking effortlessly cool while navigating the demands of city life. This style draws inspiration from street art, music culture, and the raw energy of urban environments.</p>
-
-        <h2>Key Elements of the Urban Chic Look</h2>
-        <p>At the core of Urban Chic are versatile pieces that can be mixed and matched to create a variety of looks. The outfit we're featuring today embodies this versatility:</p>
-        <ul>
-            <li><strong>Oversized denim jacket:</strong> A timeless piece that adds an edge to any outfit.</li>
-            <li><strong>Graphic t-shirt:</strong> Expresses personality and adds a pop of interest.</li>
-            <li><strong>High-waisted skinny jeans:</strong> Flattering and comfortable for all-day wear.</li>
-            <li><strong>White sneakers:</strong> Clean, fresh, and perfect for pounding the pavement.</li>
-            <li><strong>Statement accessories:</strong> The finishing touches that make the outfit uniquely yours.</li>
-        </ul>
-
-        <h2>How to Style Your Urban Chic Look</h2>
-        <p>Creating your Urban Chic outfit is all about balance and personal flair. Start by layering your oversized denim jacket over a bold graphic tee. The contrast between the structured jacket and the casual tee sets the tone for the entire look.</p>
-        <p>Pair these top layers with high-waisted skinny jeans to create a sleek silhouette that balances the proportions of the oversized jacket. Roll up the jeans slightly at the ankle to show off your crisp white sneakers, adding a touch of freshness to the ensemble.</p>
-        <p>Finally, accessorize to make the look your own. A chunky necklace can add a touch of glamour, while a stylish watch brings functionality and fashion together. Don't be afraid to mix metals or add a pop of color with your accessories – Urban Chic is all about breaking the rules with style.</p>
-
-        <h2>Where to Flaunt Your Urban Chic Style</h2>
-        <p>The beauty of Urban Chic lies in its versatility. This outfit is perfect for a variety of city scenarios:</p>
-        <ul>
-            <li>Casual coffee dates at that trendy new café</li>
-            <li>Gallery hopping in the arts district</li>
-            <li>Weekend shopping trips with friends</li>
-            <li>Casual Fridays at a creative workplace</li>
-            <li>Exploring new neighborhoods in your city</li>
-        </ul>
-        <p>Wherever you go, Urban Chic ensures you'll look put-together, feel comfortable, and be ready for whatever the city throws your way.</p>
-
-        <h2>Embracing Urban Chic: More Than Just Fashion</h2>
-        <p>Urban Chic is more than just a fashion choice – it's a reflection of the modern urban dweller's lifestyle. It speaks to those who appreciate the beauty in city life, from street art to architecture. By embracing Urban Chic, you're not just wearing clothes; you're wearing a piece of the city's vibrant culture.</p>
-
-        <p>So go ahead, put on that oversized denim jacket, lace up those pristine sneakers, and step out into the city with confidence. Urban Chic isn't just about looking good – it's about feeling good and being ready to seize all the opportunities the urban landscape has to offer.</p>
-
-        <p><a href="/#fashion">Back to Fashion</a></p>
-
-    </main>
-
-</body>
+        .product-card .price {
+            font-size: 18px;
+            color: #e53935;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .product-card .original-price {
+            font-size: 14px;
+            color: #999;
+            text-decoration: line-through;
+            margin: 5px 0;
+        }
+        .product-card .discount {
+            font-size: 14px;
+            color: #e53935;
+            margin: 5px 0;
+        }
+        .product-card .wishlist {
+            font-size: 20px;
+            color: #999;
+            margin: 10px 0;
+        }
+        @media (max-width: 768px) {
+            .product-card {
+                width: 45%;
+            }
+        }
+        @media (max-width: 480px) {
+            .product-card {
+                width: 100%;
+            }
+        }
+        .custom-image {
+            width: 100px;
+            height: 200px;
+            border-radius: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Blue New Balance shoe" height="200" src="https://i.pinimg.com/736x/69/3f/91/693f912d6f3c756400f8bc28144421ee.jpg" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Tanpa min. pembelian.
+    </div>
+    <div class="product-name">
+     Green Jacket set
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     1080V14
+    </div>
+    <div class="price">
+     Rp 1.400.000
+    </div>
+    <div class="original-price">
+     Rp 1.750.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Black New Balance shoe" height="200" src="https://i.pinimg.com/736x/ca/73/32/ca73329fe20fbd493b68847c736107be.jpg" width="300"/>
+    <div class="offer">
+     Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Tanpa min. pembelian.
+    </div>
+    <div class="product-name">
+     Grey Jacket set
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     1080V14
+    </div>
+    <div class="price">
+     Rp 1.400.000
+    </div>
+    <div class="original-price">
+     Rp 1.750.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img class="custom-image" alt="Pink Converse Raglan Hi Low Knit Top" src="https://i.pinimg.com/736x/41/72/66/4172665b71596f7ce2423f1b414856b1.jpg"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="product-name">
+        beich Jacket suit
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     Raglan Hi Low Knit Top
+    </div>
+    <div class="price">
+     Rp 1.400.000
+    </div>
+    <div class="original-price">
+     Rp 1.750.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Blue New Balance shoe" height="200" src="https://i.pinimg.com/736x/9f/28/27/9f282753147990df43feeccd33395111.jpg" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Tanpa min. pembelian.
+    </div>
+    <div class="product-name">
+        Shijoin Suit style
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     1080V14
+    </div>
+    <div class="price">
+     Rp 1.400.000
+    </div>
+    <div class="original-price">
+     Rp 1.750.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Black New Balance shoe" height="200" src="https://i.pinimg.com/736x/e3/0e/34/e30e34f853a8d32270fcb078d5d3fa60.jpg" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Tanpa min. pembelian.
+    </div>
+    <div class="product-name">
+        Kaos putih dan celana pendek putih Gojo Satoru Style
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     1080V14
+    </div>
+    <div class="price">
+     Rp 792.000
+    </div>
+    <div class="original-price">
+     Rp 990.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Pink Converse Raglan Hi Low Knit Top" height="200" src="https://i.pinimg.com/736x/6e/cc/af/6eccafea01a652dfc95124c1ed6a23f6.jpg" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Min. pembelian Rp299.000, maks. potongan Rp250.000.
+    </div>
+    <div class="product-name">
+        Black Gojo Satoru Style
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     Raglan Hi Low Knit Top
+    </div>
+    <div class="price">
+     Rp 792.000
+    </div>
+    <div class="original-price">
+     Rp 990.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Blue New Balance shoe" height="200" src="https://i.pinimg.com/736x/b9/c3/b5/b9c3b5c0019fc7afd0453262c594af7b.jpg" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Tanpa min. pembelian.
+    </div>
+    <div class="product-name">
+        Sweater biru dan celana panjang abu-abu
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     1080V14
+    </div>
+    <div class="price">
+     Rp 792.000
+    </div>
+    <div class="original-price">
+     Rp 990.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Black New Balance shoe" height="200" src="https://i.pinimg.com/736x/ec/c5/49/ecc54943da530e14a22926dcece5a47d.jpg" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Tanpa min. pembelian.
+    </div>
+    <div class="product-name">
+     Kaos Putih dan Celana panjang Hijau daun 
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     1080V14
+    </div>
+    <div class="price">
+     Rp 1.400.000
+    </div>
+    <div class="original-price">
+     Rp 1.750.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+   <div class="product-card">
+    <div class="ad">
+     AD
+    </div>
+    <div class="rating">
+     <i class="fas fa-star">
+     </i>
+     5.0
+    </div>
+    <img alt="Pink Converse Raglan Hi Low Knit Top" height="200" src="https://i.pinimg.com/736x/df/f9/93/dff993944ed6a896a3992656c5b35add.jpg" width="300"/>
+    <div class="offer">
+        Black Jack Special offer 20%
+    </div>
+    <div class="offer-details">
+     Min. pembelian Rp299.000, maks. potongan Rp250.000.
+    </div>
+    <div class="product-name">
+        Light Grey dan Celana hitam
+     <span class="vip">
+      VIP
+     </span>
+    </div>
+    <div class="product-code">
+     Raglan Hi Low Knit Top
+    </div>
+    <div class="price">
+     Rp 1.400.000
+    </div>
+    <div class="original-price">
+     Rp 1.750.000
+    </div>
+    <div class="discount">
+     -20%
+    </div>
+    <div class="wishlist">
+     <i class="far fa-heart">
+     </i>
+    </div>
+   </div>
+  </div>
+ </body>
 </html>
